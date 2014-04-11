@@ -92,7 +92,7 @@
 					<h3>How do you you want to pay?</h3>
 
 					<!-- put the payment form here -->
-					<form action="http://localhost:8080/COPYandPAYJavaMavenPojo/status" id="<%=token%>">visa master</form>
+					<form action="http://localhost:8080/mavenServlet/status" id="<%=token%>">visa master</form>
 
 				</section>
 			</div>
