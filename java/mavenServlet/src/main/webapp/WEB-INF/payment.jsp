@@ -4,9 +4,8 @@
 <head>
 <link href="bundle.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script
-	src="https://test.ctpe.net/frontend/widget/v3/widget.js?language=en&style=card">
-</script>
+
+
 </head>
 <body id="payment">
 <%
@@ -92,8 +91,7 @@
 					<h3>How do you you want to pay?</h3>
 
 					<!-- put the payment form here -->
-					<form action="http://localhost:8080/mavenServlet/status" id="<%=token%>">visa master</form>
-
+					
 				</section>
 			</div>
 			<div class="grid_3 aside">

@@ -17,23 +17,8 @@ public class StatusServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -7305728645317107693L;
 
-	@Override
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		String token = request.getParameter("token");
+	private static final String SUCCESS_PAGE = WEB_DIR + "paymentSuccess.jsp";
+	private static final String FAILURE_PAGE = WEB_DIR + "paymentError.jsp";
 
-		URL url = new URL(
-				"https://test.ctpe.net/frontend/GetStatus;jsessionid=" + token);
-		HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
-
-		String content = IOUtils.toString(conn.getInputStream());
-		if ("ACK".equals(JsonPath.read(content,
-				"$.transaction.processing.result"))) {
-			request.getRequestDispatcher(WEB_DIR + "paymentSuccess.jsp")
-					.forward(request, response);
-		} else {
-			request.getRequestDispatcher(WEB_DIR + "paymentError.jsp").forward(
-					request, response);
-		}
-	}
+	
 }
