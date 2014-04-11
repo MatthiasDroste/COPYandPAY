@@ -15,13 +15,16 @@ GETTING STARTED
 ---------------
 
 On the command line:
+<code>
 git clone https://github.com/MatthiasDroste/COPYandPAY.git
+</code>
+
 Then go to the subdirectory/project containing the technology of your choice and open teh README.md there.
 
 Current Structure:
--javaScript
---nakedNode
--java
---mavenServlet
+* javaScript<br>
+ ---- nakedNode
+* java<br>
+ ---- mavenServlet
 
 
