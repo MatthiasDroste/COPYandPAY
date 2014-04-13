@@ -17,22 +17,15 @@ import com.jayway.jsonpath.JsonPath;
 public class PaymentServlet extends HttpServlet {
 	private static final long serialVersionUID = 7025771436876538138L;
 
-	public static final String WEB_DIR = "/WEB-INF/";
-
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String tokenResponse = generateToken();
-		String token = parseTokenResponse(tokenResponse);
+		String token = JsonPath.read(tokenResponse, "$.transaction.token");
 		request.setAttribute("token", token);
 		RequestDispatcher dispatcher = request
-				.getRequestDispatcher(WEB_DIR + "payment.jsp");
+				.getRequestDispatcher("payment.jsp");
 		dispatcher.forward(request, response);
-	}
-
-	private String parseTokenResponse(String tokenResponse) {
-		String token = JsonPath.read(tokenResponse, "$.transaction.token");
-		return token;
 	}
 
 	@Override

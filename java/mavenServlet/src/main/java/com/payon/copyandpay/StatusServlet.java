@@ -2,7 +2,7 @@ package com.payon.copyandpay;
 
 import java.io.IOException;
 import java.net.URL;
-import static com.payon.copyandpay.PaymentServlet.*;
+
 import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,13 +27,19 @@ public class StatusServlet extends HttpServlet {
 		HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
 
 		String content = IOUtils.toString(conn.getInputStream());
-		if ("ACK".equals(JsonPath.read(content,
-				"$.transaction.processing.result"))) {
-			request.getRequestDispatcher(WEB_DIR + "paymentSuccess.jsp")
-					.forward(request, response);
-		} else {
-			request.getRequestDispatcher(WEB_DIR + "paymentError.jsp").forward(
-					request, response);
+		try {
+			String status = JsonPath.read(content,
+					"$.transaction.processing.result");
+			if ("ACK".equals(status)) {
+				request.getRequestDispatcher("paymentSuccess.jsp").forward(
+						request, response);
+				return;
+			}
+		} catch (Exception ex) {
+			System.out.println("error while reading JSON: "
+					+ ex.getLocalizedMessage());
 		}
+		request.getRequestDispatcher("paymentError.jsp").forward(request,
+				response);
 	}
 }
