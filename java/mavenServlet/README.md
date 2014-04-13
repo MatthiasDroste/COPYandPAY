@@ -4,7 +4,7 @@ minimal integration of COPYandPAY using a maven project with Servlets and jsp.
 
 ## Usage
 
-### Import the project: 
+### Import the project to Eclipse: 
 
 In "Git Repositories" view, rightclick on the mavenServlet-folder -> import projects -> import existing Projects -> Finish
 
@@ -27,3 +27,4 @@ Created in Eclipse/Spring Tool Suite 3.5.0.RELEASE http://spring.io/tools/sts
 Maven project http://maven.org
 
 Tomcat http://tomcat.apache.org/
+
