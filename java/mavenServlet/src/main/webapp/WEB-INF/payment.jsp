@@ -90,7 +90,7 @@
 
 					<h3>How do you you want to pay?</h3>
 
-					<!-- put the payment form here -->
+					<!-- put the payment form here You can access the token using <%=token %>-->
 					
 				</section>
 			</div>
