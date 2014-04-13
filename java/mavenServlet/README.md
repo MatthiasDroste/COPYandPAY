@@ -4,15 +4,16 @@ minimal integration of COPYandPAY using a maven project with Servlets and jsp.
 
 ## Usage
 
-**Prerequisites**: This guideline assumes that you have Eclipse with a maven plug-in (m2e), egit and Java >= 1.6 installed, see the Tools section below for more info.
+**Prerequisites**: This guideline assumes that you have Eclipse with a maven plug-in (m2e), egit and JD K>= 1.6 installed, see the Tools section below for more info.
 
 ### Import the project to Eclipse: 
 
-In "Git Repositories" view, rightclick on the mavenServlet-folder -> import projects -> import existing Projects -> Finish
+* Open the Git-Perspective. If you've already cloned COPYandPAY, click on "Add an existing local git repository" (otherwise click on the "clone a git repository" button). 
+* Rightclick on the mavenServlet-folder -> import projects -> import existing Projects -> Finish
 
 ### Run the project:
 
-Rightclick on project in the eclipse package explorer -> Run as -> Maven build -> enter in Goals: tomcat:run 
+In the Java-Perspective, rightclick on project in the eclipse package explorer -> Run as -> Maven build -> enter in Goals: tomcat:run 
 
 Call it on http://localhost:8080/mavenServlet/payment
 
