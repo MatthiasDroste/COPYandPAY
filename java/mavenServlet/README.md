@@ -4,7 +4,7 @@ minimal integration of COPYandPAY using a maven project with Servlets and jsp.
 
 ## Usage
 
-**Prerequisites**: This guideline assumes that you have Eclipse with a maven plug-in (m2e), egit and Java >= 1.6 installed.
+**Prerequisites**: This guideline assumes that you have Eclipse with a maven plug-in (m2e), egit and Java >= 1.6 installed, see the Tools section below for more info.
 
 ### Import the project to Eclipse: 
 
