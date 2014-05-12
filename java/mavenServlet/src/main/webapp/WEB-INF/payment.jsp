@@ -90,7 +90,35 @@
 
 					<h3>How do you you want to pay?</h3>
 
-					<!-- put the payment form here -->
+					<h1></h1>
+					<div class="payment_checkout">
+						replace me with COPYandPAY checkout
+					</div>
+					<p>
+						Referring to <a
+							href="https://test.paysourcing.info/frontend/Integrationguide/COPYandPAY.html"
+							target="_blank">COPYandPAY Integration Guide</a> please design a
+						checkout page with following payment methods:
+					</p>
+					<ul>
+						<li>Visa</li>
+						<li>MasterCard</li>
+						<li>SOFORT Überweisung</li>
+					</ul>
+					<p>Your task is done if:</p>
+					<ul>
+						<li>...Visa, MasterCard and SOFORT Überweisung is shown at
+							the checkout page</li>
+						<li>...a payment is done with Visa, eg. Name: user your name,
+							Number:4200 0000 0000 0000, CVV:123, Expiry date 12/2014</li>
+						<li>...the result page displays the result based on the json
+							response</li>
+					</ul>
+					<hr>
+					<p>Please adapt the PaymentServlet.java in order to request a valid token:</p>
+					<ul>
+						<li>Value of your current token request: <%=token%></li>
+					</ul>
 					
 				</section>
 			</div>
