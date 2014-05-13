@@ -10,12 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.jayway.jsonpath.JsonPath;
 
 public class StatusServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -7305728645317107693L;
+	private static final Logger log = LoggerFactory.getLogger("StatusServlet");
 
 	@Override
 	protected void doGet(HttpServletRequest request,
@@ -36,8 +39,7 @@ public class StatusServlet extends HttpServlet {
 				return;
 			}
 		} catch (Exception ex) {
-			System.out.println("error while reading JSON: "
-					+ ex.getLocalizedMessage());
+			log.error("error while reading JSON: " + ex.getLocalizedMessage());
 		}
 		request.getRequestDispatcher("paymentError.jsp").forward(request,
 				response);
