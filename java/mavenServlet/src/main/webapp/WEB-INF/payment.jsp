@@ -3,6 +3,7 @@
 <html class="no-js modern" lang="de">
 <head>
 <link href="bundle.css" rel="stylesheet" type="text/css">
+<link href="checkout.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 
@@ -17,8 +18,7 @@
 
 
 				<p class="hd-welcome">
-					<strong>Hello&nbsp;Hans</strong> (<a id="logoutLink"
-						href="https://www.brands4friends.de/account/logout">Logout</a>)
+					<strong>Hello&nbsp;Hans</strong> (<a id="logoutLink" href="#">Logout</a>)
 				</p>
 
 				<p class="time t-help-trigger" id="basketTimer" data-time="893"></p>
@@ -54,7 +54,7 @@
 							<tbody>
 								<tr>
 									<td class="image"><img
-										src="https://static.brands4friends.de/120813PRCU/wk/7630003636598_001.jpg"
+										src="images/bag.jpg"
 										alt="Schultertasche Filatura, B40 x H45 x T20 cm" /></td>
 									<td class="description"><strong>PRINCESS&amp;CULT</strong>
 										Should bag Filatura, B40 x H45 x T20 cm<span class="uvp">
