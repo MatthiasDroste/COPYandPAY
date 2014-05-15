@@ -119,7 +119,6 @@
 						<li>...the result page displays the result based on the json
 							response</li>
 					</ul>
-					
 				</section>
 			</div>
 			<div class="grid_3 aside">
