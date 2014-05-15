@@ -2,7 +2,6 @@ package com.payon.copyandpay;
 
 import java.io.IOException;
 import java.net.URL;
-import static com.payon.copyandpay.PaymentServlet.*;
 import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +12,16 @@ import org.apache.commons.io.IOUtils;
 
 import com.jayway.jsonpath.JsonPath;
 
+/**
+ * This Servlet handles calls to http://localhost:8080/mavenServlet/status by doing two things:<br>
+ * 1. Call GetStatus to receive the JSON-formatted payment result. 
+ * 2. Evaluate the content of the JSON response and call the shop's success- or error-page.
+ * 
+ */
 public class StatusServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -7305728645317107693L;
 
-	private static final String SUCCESS_PAGE = WEB_DIR + "paymentSuccess.jsp";
-	private static final String FAILURE_PAGE = WEB_DIR + "paymentError.jsp";
-
+	//TODO fill in the snippet from step 3 of the COPYandPAY tutorial here.
 	
 }

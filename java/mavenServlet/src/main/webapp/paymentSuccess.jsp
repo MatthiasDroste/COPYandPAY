@@ -49,7 +49,7 @@
 				})
 	})
 </script>
-<link href="bundle.css" rel="stylesheet" type="text/css">
+<link href="css/bundle.css" rel="stylesheet" type="text/css">
 <style>
 #toggleStatus {
 	cursor: pointer;

@@ -14,11 +14,16 @@ import org.apache.commons.io.IOUtils;
 
 import com.jayway.jsonpath.JsonPath;
 
+/**
+ * This servlet handles calls to http://localhost:8080/mavenServlet/payment by doing two things:<br>
+ * 1. Generate a token<br>
+ * 2. Load the payment.jsp-page with the token to display the payment form.
+ */
 public class PaymentServlet extends HttpServlet {
 	private static final long serialVersionUID = 7025771436876538138L;
 
-	public static final String WEB_DIR = "/WEB-INF/";
-
+	private static final String PAYMENT_PAGE = "payment.jsp";
+	
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -26,7 +31,7 @@ public class PaymentServlet extends HttpServlet {
 		String token = JsonPath.read(tokenResponse, "$.transaction.token");
 		request.setAttribute("token", token);
 		RequestDispatcher dispatcher = request
-				.getRequestDispatcher(WEB_DIR + "payment.jsp");
+				.getRequestDispatcher(PAYMENT_PAGE);
 		dispatcher.forward(request, response);
 	}
 
@@ -36,7 +41,12 @@ public class PaymentServlet extends HttpServlet {
 		doGet(req, resp);
 	}
 
+	/**
+	 * Step 1 of the COPYandPAY tutorial: Sends a request to the
+	 * GenerateToken-URL and returns the token received in the response.
+	 */
 	private String generateToken() {
-		throw new IllegalStateException("not implemented yet");
+		// TODO fill in the snippet from step 1 of the COPYandPAY tutorial here.
+		throw new IllegalStateException("NOT IMPLEMENTED YET");
 	}
 }

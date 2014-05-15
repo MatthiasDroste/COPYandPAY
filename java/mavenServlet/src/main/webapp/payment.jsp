@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html class="no-js modern" lang="de">
 <head>
-<link href="bundle.css" rel="stylesheet" type="text/css">
-<link href="checkout.css" rel="stylesheet" type="text/css">
+<link href="css/bundle.css" rel="stylesheet" type="text/css">
+<link href="css/checkout.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 
@@ -94,6 +94,11 @@
 					<div class="payment_checkout">
 						replace me with COPYandPAY checkout
 					</div>
+					<p>Please adapt the PaymentServlet.java in order to request a valid token:</p>
+					<ul>
+						<li>Value of your current token request: <%=token%></li>
+					</ul>
+					<hr>
 					<p>
 						Referring to <a
 							href="https://test.paysourcing.info/frontend/Integrationguide/COPYandPAY.html"
@@ -113,11 +118,6 @@
 							Number:4200 0000 0000 0000, CVV:123, Expiry date 12/2014</li>
 						<li>...the result page displays the result based on the json
 							response</li>
-					</ul>
-					<hr>
-					<p>Please adapt the PaymentServlet.java in order to request a valid token:</p>
-					<ul>
-						<li>Value of your current token request: <%=token%></li>
 					</ul>
 					
 				</section>
