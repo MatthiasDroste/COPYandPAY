@@ -16,12 +16,11 @@ import com.jayway.jsonpath.JsonPath;
  * This Servlet handles calls to http://localhost:8080/mavenServlet/status by doing two things:<br>
  * 1. Call GetStatus to receive the JSON-formatted payment result. 
  * 2. Evaluate the content of the JSON response and call the shop's success- or error-page.
- * 
  */
 public class StatusServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -7305728645317107693L;
 
-	//TODO fill in the snippet from step 3 of the COPYandPAY tutorial here.
+	//TODO Fill in the snippet from step 3 of the COPYandPAY tutorial http://www.paysourcing.com/Integrationguide/COPYandPAY.html here.
 	
 }

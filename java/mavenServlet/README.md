@@ -8,7 +8,9 @@ Minimal integration of COPYandPAY using a maven project with Servlets and jsp.
 
 ### Import the project to Eclipse: 
 
-* Open the Git-Perspective. If you've already cloned COPYandPAY, click on "Add an existing local git repository" (otherwise click on the "clone a git repository" button). 
+* Open the Git-Perspective. 
+  * Click on the "clone a git repository" button, uri is https://github.com/PAYON-AG/COPYandPAY.git. 
+  * (or if you cloned on the command line: click on "Add an existing local git repository".) 
 * Rightclick on the mavenServlet-folder -> import projects -> import existing Projects -> Finish
 
 ### Run the project:
@@ -17,14 +19,21 @@ In the Java-Perspective, rightclick on project in the eclipse package explorer -
 
 Call it on http://localhost:8080/mavenServlet/payment
 
-You now should see an IllegalArgumentException("not implemented yet"). 
+You now should see an IllegalArgumentException("NOT IMPLEMENTED YET"). 
 Great! Proceed to developing the PaymentServlet.java.
 
 ## Developing
 
+Basically you just follow this tutorial: http://www.paysourcing.com/Integrationguide/COPYandPAY.html
+
 * *PaymentServlet.java* does step 1 of the tutorial: it calls CreateToken and dispatches to the payment.jsp
-* *payment.jsp* does step 2 of the tutorial: reads the token as a request attribute and displays the payment page. Configure the form to point to http://localhost:8080/mavenServlet/status
+* *payment.jsp* does step 2 of the tutorial: reads the token as a request attribute and displays the payment page. Configure the form to point to http://localhost:8080/mavenServlet/status and offer the brands VISA and MASTER
 * *StatusServlet.java* does step 3 of the tutorial: receives the redirect of the user after payment. It calls GetStatus, evaluates it an dispatches to the paymentSuccess.jsp or paymentError.jsp.
+
+### Once you are done
+1.  Visa and MasterCard are shown at the checkout page
+2.  A payment is done with Visa, eg. Name: use your name, Number:4200 0000 0000 0000, CVV:123, Expiry date 12/2014
+3.  The result page http://localhost:8080/mavenServlet/status displays the result based on the json response.
 
 ### Tools
 

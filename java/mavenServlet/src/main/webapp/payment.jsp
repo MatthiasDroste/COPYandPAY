@@ -90,14 +90,17 @@
 
 					<h3>How do you you want to pay?</h3>
 
-					<h1></h1>
+					
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- COPYandPAY form should go in here------------------------------------------------------------------------------------------------------- -->
+
 					<div class="payment_checkout">
 						replace me with COPYandPAY checkout
 					</div>
 					<p>Please adapt the PaymentServlet.java in order to request a valid token:</p>
-					<ul>
-						<li>Value of your current token request: <%=token%></li>
-					</ul>
+					
+					<h3>Value of your current token request: <%=token%></h3>
+					
 					<hr>
 					<p>
 						Referring to <a
@@ -106,19 +109,21 @@
 						checkout page with following payment methods:
 					</p>
 					<ul>
-						<li>Visa</li>
-						<li>MasterCard</li>
-						<li>SOFORT Überweisung</li>
+						<li>VISA</li>
+						<li>MASTER</li>
 					</ul>
 					<p>Your task is done if:</p>
 					<ul>
-						<li>...Visa, MasterCard and SOFORT Überweisung is shown at
+						<li>...VISA, MASTER is shown at
 							the checkout page</li>
 						<li>...a payment is done with Visa, eg. Name: user your name,
 							Number:4200 0000 0000 0000, CVV:123, Expiry date 12/2014</li>
-						<li>...the result page displays the result based on the json
+						<li>...the result page http://localhost:8080/mavenServlet/status displays the result based on the json
 							response</li>
 					</ul>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- End of COPYandPAY form part ------------------------------------------------------------------------------------------------------- -->				
+					
 				</section>
 			</div>
 			<div class="grid_3 aside">
