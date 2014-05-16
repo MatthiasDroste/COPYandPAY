@@ -6,7 +6,7 @@
 <link href="css/checkout.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-
+<!-- Step 2 of the COPYandPAY tutorial http://www.paysourcing.com/Integrationguide/COPYandPAY.html goes in here, js-lib on top, payment form further down.  -->
 </head>
 <body id="payment">
 <%
